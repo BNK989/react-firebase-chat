@@ -1,0 +1,84 @@
+import { Input } from "../../components/ui/input"
+import { Avatar, AvatarImage, AvatarFallback } from "../../components/ui/avatar"
+import EmojiPicker from "emoji-picker-react"
+import React from "react"
+
+function Chat() {
+  const [isEmojiOpen, setIsEmojiOpen] = React.useState(false)
+  const [text, setText] = React.useState("")
+
+  const handleEmoji = (e) => {
+    setText((prevText) => prevText + e.emoji)
+    setIsEmojiOpen(false)
+  }
+
+  return (
+    <div className="chat flex flex-col flex-[2] border-myBorder border-x h-full">
+      <div className="top p-5 flex items-center justify-between border-b border-myBorder">
+        <div className="user flex gap-4 items-center">
+          <Avatar className="w-14 h-14">
+            <AvatarImage src="./avatar.png" />
+            {/* <AvatarFallback>CN</AvatarFallback> */}
+          </Avatar>
+          <div className="texts">
+            <span className="text-lg font-bold tracking-wide">Jane Doe</span>
+            <p className="text-sm font-thin text-stone-400">
+              Hey, how are you doing?
+            </p>
+          </div>
+        </div>
+        <div className="icons flex gap-5">
+          <img className="w-5 h-5 cursor-pointer" src="./phone.png" alt="" />
+          <img className="w-5 h-5 cursor-pointer" src="./video.png" alt="" />
+          <img className="w-5 h-5 cursor-pointer" src="./info.png" alt="" />
+        </div>
+      </div>
+      <div className="center flex-1 border-b border-myWhite">
+        <div className="message">
+          <Avatar className="w-14 h-14">
+            <AvatarImage src="./avatar.png" />
+            {/* <AvatarFallback>CN</AvatarFallback> */}
+          </Avatar>
+          <div className="texts">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem veritatis expedita debitis inventore perspiciatis in unde qui?</p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+      </div>
+      <div className="bottom flex items-center justify-between p-5">
+        <div className="icons flex gap-5">
+          <img className="w-5 h-5 cursor-pointer" src="./img.png" alt="" />
+          <img className="w-5 h-5 cursor-pointer" src="./camera.png" alt="" />
+          <img className="w-5 h-5 cursor-pointer" src="./mic.png" alt="" />
+        </div>
+        <Input
+          type="text"
+          placeholder="Type a message..."
+          onChange={(e) => setText(e.target.value)}
+          value={text}
+          className="flex-1 mx-3 bg-myBlue border-none outline-none focus-visible:border-0 focus-visible:ring-0 focus-visible:ring-offset-[0]"
+        />
+        <div className="emoji relative">
+          <img
+            onClick={() => setIsEmojiOpen(!isEmojiOpen)}
+            className="w-5 h-5 cursor-pointer"
+            src="./emoji.png"
+            alt=""
+          />
+          <EmojiPicker
+            open={isEmojiOpen}
+            onEmojiClick={handleEmoji}
+            className="absolute bottom-12 left-0"
+            style={{ position: "absolute" }}
+            autoFocusSearch={true}
+          />
+        </div>
+        <button className="send-btn ml-3 cursor-pointer bg-blue-500 text-white px-4 py-2 rounded-sm ">
+          Send
+        </button>
+      </div>
+    </div>
+  )
+}
+
+export default Chat

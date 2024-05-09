@@ -1,0 +1,7 @@
+{
+  "semi": false,
+  "order": [
+    "tailwindcss",
+    "standard"
+  ]
+}
