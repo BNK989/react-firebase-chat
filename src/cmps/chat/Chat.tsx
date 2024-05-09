@@ -33,7 +33,31 @@ function Chat() {
           <img className="w-5 h-5 cursor-pointer" src="./info.png" alt="" />
         </div>
       </div>
-      <div className="center flex-1 border-b border-myWhite">
+      <div className="center p-3 flex gap-5 flex-col flex-1 border-b border-myWhite overflow-y-scroll">
+        {/* START OF MSGs */}
+        <div className="message max-w-[80%] flex gap-5 ">
+          <Avatar className="w-14 h-14">
+            <AvatarImage src="./avatar.png" />
+            {/* <AvatarFallback>CN</AvatarFallback> */}
+          </Avatar>
+          <div className="texts  flex flex-col">
+            <img className="max-w-[70%] max-h-[70%] object-cover rounded my-1" src="https://picsum.photos/200/300" alt="" />
+            <p className="p-3 rounded bg-cyan-950 bg-opacity-30">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem veritatis expedita debitis inventore perspiciatis in unde qui?</p>
+            <span className="text-xs mt-1">1 min ago</span>
+          </div>
+        </div>
+
+        <div className="message max-w-[80%] flex gap-5 self-end flex-row-reverse">
+          <Avatar className="w-14 h-14">
+            <AvatarImage src="./avatar.png" />
+            {/* <AvatarFallback>CN</AvatarFallback> */}
+          </Avatar>
+          <div className="texts p-3 rounded bg-sky-500 bg-opacity-30">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem veritatis expedita debitis inventore perspiciatis in unde qui?</p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+
         <div className="message">
           <Avatar className="w-14 h-14">
             <AvatarImage src="./avatar.png" />
@@ -44,6 +68,73 @@ function Chat() {
             <span>1 min ago</span>
           </div>
         </div>
+
+        <div className="message">
+          <Avatar className="w-14 h-14">
+            <AvatarImage src="./avatar.png" />
+            {/* <AvatarFallback>CN</AvatarFallback> */}
+          </Avatar>
+          <div className="texts">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem veritatis expedita debitis inventore perspiciatis in unde qui?</p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+
+        <div className="message">
+          <Avatar className="w-14 h-14">
+            <AvatarImage src="./avatar.png" />
+            {/* <AvatarFallback>CN</AvatarFallback> */}
+          </Avatar>
+          <div className="texts">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem veritatis expedita debitis inventore perspiciatis in unde qui?</p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+
+        <div className="message">
+          <Avatar className="w-14 h-14">
+            <AvatarImage src="./avatar.png" />
+            {/* <AvatarFallback>CN</AvatarFallback> */}
+          </Avatar>
+          <div className="texts">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem veritatis expedita debitis inventore perspiciatis in unde qui?</p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+
+        <div className="message">
+          <Avatar className="w-14 h-14">
+            <AvatarImage src="./avatar.png" />
+            {/* <AvatarFallback>CN</AvatarFallback> */}
+          </Avatar>
+          <div className="texts">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem veritatis expedita debitis inventore perspiciatis in unde qui?</p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+
+        <div className="message">
+          <Avatar className="w-14 h-14">
+            <AvatarImage src="./avatar.png" />
+            {/* <AvatarFallback>CN</AvatarFallback> */}
+          </Avatar>
+          <div className="texts">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem veritatis expedita debitis inventore perspiciatis in unde qui?</p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+
+        <div className="message">
+          <Avatar className="w-14 h-14">
+            <AvatarImage src="./avatar.png" />
+            {/* <AvatarFallback>CN</AvatarFallback> */}
+          </Avatar>
+          <div className="texts">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem veritatis expedita debitis inventore perspiciatis in unde qui?</p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+        {/* END OF MSG */}
       </div>
       <div className="bottom flex items-center justify-between p-5">
         <div className="icons flex gap-5">
